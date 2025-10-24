@@ -8,7 +8,7 @@ function Portfolio() {
       id: 1,
       title: 'Transcript',
       description: 'ใบแสดงผลการเรียน',
-      image: '/image/transcript.jpg',
+      image: 'https://via.placeholder.com/400x600/667eea/ffffff?text=Transcript+Image',
       technologies: ['Academic Record'],
       category: 'Education'
     }

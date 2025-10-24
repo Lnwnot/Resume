@@ -1,0 +1,26 @@
+/* CSS Placeholder */
+.placeholder-image {
+  width: 400px;
+  height: 600px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 10px;
+  position: relative;
+}
+
+.placeholder-image::before {
+  content: '📄';
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.placeholder-image::after {
+  content: 'Transcript';
+  position: absolute;
+  bottom: 30px;
+}

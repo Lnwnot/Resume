@@ -115,5 +115,8 @@ src/
 เพื่อเพิ่มรูปภาพ Transcript จริง:
 
 1. วางไฟล์ `transcript.jpg` ในโฟลเดอร์ `public/image/`
-2. รูปภาพจะแสดงอัตโนมัติใน Portfolio
-3. คลิกเพื่อดูขนาดเต็มใน Modal
+2. แก้ไขไฟล์ `src/components/Portfolio.js` เปลี่ยน image path จาก placeholder เป็น `/image/transcript.jpg`
+3. รูปภาพจะแสดงอัตโนมัติใน Portfolio
+4. คลิกเพื่อดูขนาดเต็มใน Modal
+
+**หมายเหตุ**: ตอนนี้ใช้ placeholder image สำหรับแสดงตัวอย่าง
