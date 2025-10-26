@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Experience({ experience }) {
+function Experience({ experience, language, t }) {
   return (
     <div className="section">
       <h2 className="section-title">
         <i className="icon">💼</i>
-        ประสบการณ์การทำงาน
+        {t.experience}
       </h2>
       
       <div className="experience-timeline">
@@ -18,7 +18,7 @@ function Experience({ experience }) {
             <div className="timeline-content">
               <div className="experience-card">
                 <div className="experience-header">
-                  <h3 className="position-title">{exp.position}</h3>
+                  <h3 className="position-title">{language === 'th' ? exp.positionTh : exp.positionEn}</h3>
                   <div className="company-info">
                     <span className="company-name">{exp.company}</span>
                     <span className="work-duration">
@@ -27,7 +27,7 @@ function Experience({ experience }) {
                   </div>
                 </div>
                 <div className="experience-description">
-                  <p>{exp.description}</p>
+                  <p>{language === 'th' ? exp.descriptionTh : exp.descriptionEn}</p>
                 </div>
               </div>
             </div>
@@ -39,3 +39,4 @@ function Experience({ experience }) {
 }
 
 export default Experience;
+

@@ -1,11 +1,11 @@
 import React from 'react';
 
-function PersonalInfo({ personalInfo }) {
+function PersonalInfo({ personalInfo, language, t }) {
   return (
     <div className="section">
       <h2 className="section-title">
         <i className="icon">👤</i>
-        ข้อมูลส่วนตัว
+        {t.personalInfo}
       </h2>
       
       <div className="personal-info-card">
@@ -21,18 +21,18 @@ function PersonalInfo({ personalInfo }) {
         </div>
         
         <div className="contact-me-section">
-          <h3>Contact Me</h3>
+          <h3>{t.contactMe}</h3>
           <div className="contact-me-email">
             <a href={`mailto:${personalInfo.email}`} className="contact-me-btn">
               <i className="contact-icon">📧</i>
-              Send Email
+              {t.sendEmail}
             </a>
           </div>
         </div>
         
         <div className="summary-section">
-          <h3>สรุปประวัติ</h3>
-          <p className="summary-text">{personalInfo.summary}</p>
+          <h3>{t.summary}</h3>
+          <p className="summary-text">{language === 'th' ? personalInfo.summaryTh : personalInfo.summaryEn}</p>
         </div>
       </div>
     </div>
@@ -40,3 +40,4 @@ function PersonalInfo({ personalInfo }) {
 }
 
 export default PersonalInfo;
+

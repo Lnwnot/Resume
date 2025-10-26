@@ -1,23 +1,26 @@
 import React, { useState } from 'react';
 
-function Portfolio() {
+function Portfolio({ language, t }) {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const portfolioItems = [
     {
       id: 1,
       title: 'Transcript',
-      description: 'ใบแสดงผลการเรียน',
+      descriptionTh: 'ใบแสดงผลการเรียน',
+      descriptionEn: 'Academic Transcript',
       image: 'https://via.placeholder.com/400x600/667eea/ffffff?text=Transcript+Image',
       technologies: ['Academic Record'],
       category: 'Education'
     }
   ];
 
-  const categories = ['All', 'Education'];
-  const [activeCategory, setActiveCategory] = useState('All');
+  const categories = language === 'th' 
+    ? ['ทั้งหมด', 'การศึกษา'] 
+    : ['All', 'Education'];
+  const [activeCategory, setActiveCategory] = useState(categories[0]);
 
-  const filteredItems = activeCategory === 'All' 
+  const filteredItems = activeCategory === categories[0] || activeCategory === 'All'
     ? portfolioItems 
     : portfolioItems.filter(item => item.category === activeCategory);
 
@@ -33,7 +36,7 @@ function Portfolio() {
     <div className="section">
       <h2 className="section-title">
         <i className="icon">🎨</i>
-        ผลงาน
+        {t.portfolio}
       </h2>
 
       {/* Category Filter */}

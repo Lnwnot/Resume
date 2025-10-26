@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Skills({ skills }) {
+function Skills({ skills, language, t }) {
   return (
     <div className="section">
       <h2 className="section-title">
         <i className="icon">🛠️</i>
-        ทักษะ
+        {t.skills}
       </h2>
       
       <div className="skills-container">
@@ -42,3 +42,4 @@ function getSkillIcon(skill) {
 }
 
 export default Skills;
+

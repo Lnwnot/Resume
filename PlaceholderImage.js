@@ -25,3 +25,4 @@ function PlaceholderImage({ width = 400, height = 600, text = 'Transcript' }) {
 }
 
 export default PlaceholderImage;
+
